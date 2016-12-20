@@ -15,16 +15,16 @@ page('/', function(ctx, next){
 			},
 			url: 'office.jpg',
 			likes: 10,
-			liked: true
+			liked: false
 		},
 		{
 			user: {
 				username: 'Enmanuel Jarquin',
-				avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg'
+				avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/admod/128.jpg'
 			},
-			url: 'office.jpg',
+			url: 'sample-1.jpg',
 			likes: 2,
-			liked: true
+			liked: false
 		},		
 	];
 	empty(main).appendChild(template(pictures));
