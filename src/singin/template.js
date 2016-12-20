@@ -20,7 +20,7 @@ var singinForm = yo`
 			</form>
 		</div>
 	</div>
-	<div class="row">a
+	<div class="row">
 		<div class="login-box">
 			¿No tienes una cuenta? <a href="/singup">Regístrate</a>
 		</div>
