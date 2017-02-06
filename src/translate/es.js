@@ -14,5 +14,7 @@ module.exports = {
 	'singup.have-account': '¿Tienes una cuenta?',
 	'singin': 'Entrar',
 	'singin.not-have-account': '¿No tienes una cuenta?',
-	'language': 'Idioma'
+	'language': 'Idioma',
+	'upload-picture': 'Subir foto',
+	'upload': 'Subir'
 }
