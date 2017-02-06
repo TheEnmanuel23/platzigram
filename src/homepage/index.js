@@ -7,7 +7,7 @@ var header = require('../header');
 var axios = require('axios');
 
 
-page('/', header, loadpicturesAxios, function(ctx, next){
+page('/', header, loadPicturesFetch, function(ctx, next){
 	title('Platzigram');
 	var main = document.getElementById('main-container');
 	console.log(ctx.pictures);
@@ -36,3 +36,17 @@ function loadpicturesAxios(ctx, next){
 			console.log(err);
 		});
 };
+
+function loadPicturesFetch(ctx, next){
+	fetch('/api/pictures')
+		.then(function (res){
+			return res.json();
+		})
+		.then(function(pictures){
+			ctx.pictures = pictures;
+			next();
+		})
+		.catch(function(err){
+			console.log(err);
+		});
+}
