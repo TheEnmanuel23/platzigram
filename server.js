@@ -44,7 +44,7 @@ app.get('/api/pictures', function(req, res){
 		},
 		{
 			user: {
-				username: 'Enmanuel Jarquin',
+				username: 'Angélica Cabrera',
 				avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/admod/128.jpg'
 			},
 			url: 'sample-1.jpg',
@@ -53,10 +53,7 @@ app.get('/api/pictures', function(req, res){
 			createdAt: new Date().setDate(new Date().getDate() - 10)
 		},		
 	];
-	setTimeout(function(){
-		res.send(pictures);
-	}, 2000);
-	
+	res.send(pictures);
 })
 
 app.post('/api/pictures', function (req, res) {
@@ -66,6 +63,41 @@ app.post('/api/pictures', function (req, res) {
     }
     res.send('File uploaded');
   })
+})
+
+app.get('/api/user/:username', function(req, res){
+	const user = {
+		username: req.params.username,
+		avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/admod/128.jpg',
+		pictures: [
+				{
+					id: 1,
+					src: 'https://fb-s-d-a.akamaihd.net/h-ak-xpt1/v/t1.0-1/p160x160/15698305_1859695137597513_6580231155928255033_n.jpg?oh=6fce37c3171c4e7d63ac839000ae2405&oe=593A924E&__gda__=1498107973_8515b76894fb18ada34701cd0ea8a28c',
+					likes: 3
+				},{
+					id: 2,
+					src: 'https://fb-s-d-a.akamaihd.net/h-ak-xpt1/v/t1.0-1/p160x160/15698305_1859695137597513_6580231155928255033_n.jpg?oh=6fce37c3171c4e7d63ac839000ae2405&oe=593A924E&__gda__=1498107973_8515b76894fb18ada34701cd0ea8a28c',
+					likes: 23
+				},{
+					id: 3,
+					src: 'https://fb-s-d-a.akamaihd.net/h-ak-xpt1/v/t1.0-1/p160x160/15698305_1859695137597513_6580231155928255033_n.jpg?oh=6fce37c3171c4e7d63ac839000ae2405&oe=593A924E&__gda__=1498107973_8515b76894fb18ada34701cd0ea8a28c',
+					likes: 42
+				},{
+					id: 4,
+					src: 'https://fb-s-d-a.akamaihd.net/h-ak-xpt1/v/t1.0-1/p160x160/15698305_1859695137597513_6580231155928255033_n.jpg?oh=6fce37c3171c4e7d63ac839000ae2405&oe=593A924E&__gda__=1498107973_8515b76894fb18ada34701cd0ea8a28c',
+					likes: 14
+				},{
+					id: 5,
+					src: 'https://fb-s-d-a.akamaihd.net/h-ak-xpt1/v/t1.0-1/p160x160/15698305_1859695137597513_6580231155928255033_n.jpg?oh=6fce37c3171c4e7d63ac839000ae2405&oe=593A924E&__gda__=1498107973_8515b76894fb18ada34701cd0ea8a28c',
+					likes: 53
+				}
+			]
+		};
+	res.send(user);
+})
+
+app.get('/:username', function(req, res){
+	res.render('index', {title: `Platzigram - ${req.params.username}` });
 })
 
 app.listen(3000, function(err){
