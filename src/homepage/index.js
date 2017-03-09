@@ -7,12 +7,20 @@ var header = require('../header');
 var axios = require('axios');
 
 
-page('/', header, asyncLoad, function(ctx, next){
+page('/', header, loading, asyncLoad, function(ctx, next){
 	title('Platzigram');
 	var main = document.getElementById('main-container');
 	console.log(ctx.pictures);
 	empty(main).appendChild(template(ctx.pictures));
 });
+
+function loading(ctx, next){
+	var el = document.createElement('div');
+	el.classList.add('loader');
+	var main = document.getElementById('main-container');
+	main.appendChild(el);
+	next();
+};
 
 function loadpictures(ctx, next){
 	request
