@@ -6588,3 +6588,10 @@ body {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0); }
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%; }
+
+.modal .fa-heart {
+  display: inline-block; }

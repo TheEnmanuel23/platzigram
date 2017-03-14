@@ -16,6 +16,11 @@ page('/:username/:id', header, loadUser, function(ctx, next){
 	empty(main).appendChild(template(ctx.user));
 
   	$('.modal').modal();
+	$(`#modal${ctx.params.id}`).modal({
+		complete: function(){
+			page(`/${ctx.params.username}`);
+		}
+	});
 	$(`#modal${ctx.params.id}`).modal('open');
 });
 

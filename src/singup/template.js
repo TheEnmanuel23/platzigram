@@ -3,7 +3,7 @@ var landing = require('../landing');
 var translate = require('../translate');
 
 var singupForm = yo`
-<div class="col s12 m7">
+<div class="col s12 m7">ṕk/2
 	<div class="row">
 		<div class="singup-box">
 			<h1 class="platzigram">Platzigram</h1>
