@@ -1,10 +1,10 @@
 var express =  require('express');
-var app =  express();
 var multer  = require('multer');
 var ext = require('file-extension');
-var aws = require('aws-sdk')
-var multerS3 = require('multer-s3')
+var aws = require('aws-sdk');
+var multerS3 = require('multer-s3');
 
+var app =  express();
 var config = require('./config')
 
 var s3 = new aws.S3({
@@ -14,7 +14,7 @@ var s3 = new aws.S3({
 
 var storage = multerS3({
 	s3: s3,
-	bucket: 'platzigram-clase',
+	bucket: 'platzigram-project',
 	acl: 'public-read',
 	metadata: function(req, file, cb){
 		cb(null, { fieldName: file.fieldname })

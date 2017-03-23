@@ -85,6 +85,3 @@ GitHub.sublime-settings
 ### Git ###
 *.orig
 uploads/*
-
-# CREDENCIALES DE AMAZON S3
-env.sh
