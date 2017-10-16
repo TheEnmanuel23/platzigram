@@ -3,11 +3,11 @@ var landing = require('../landing');
 var translate = require('../translate');
 
 var singupForm = yo`
-<div class="col s12 m7">ṕk/2
+<div class="col s12 m7">
 	<div class="row">
 		<div class="singup-box">
 			<h1 class="platzigram">Platzigram</h1>
-			<form action="" class="singup-form">
+			<form action="/singup" method="POST" class="singup-form">
 				<h2>${translate.message('singup.subheading')}</h2>
 				<div class="section">
 					<a href="" class="btn btn-fb hide-on-small-only">${translate.message('singup.facebook')}</a>

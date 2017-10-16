@@ -1,0 +1,20 @@
+2017-10-11T02:43:22.620386046 1.008091s notice: Recursively removing directory /home/enmisac/Documents/node_projects/platzigram/rethinkdb_data/tmp
+2017-10-11T02:43:22.659134742 1.046817s notice: Initializing directory /home/enmisac/Documents/node_projects/platzigram/rethinkdb_data
+2017-10-11T02:43:22.660353154 1.048029s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/enmisac/Documents/node_projects/platzigram/rethinkdb_data' did not already exist or is empty.)
+2017-10-11T02:43:22.671331794 1.059010s notice: Running rethinkdb 2.3.6~0trusty (GCC 4.8.2)...
+2017-10-11T02:43:22.706057811 1.093741s notice: Running on Linux 4.2.0-42-generic i686
+2017-10-11T02:43:22.706869779 1.094542s notice: Loading data from directory /home/enmisac/Documents/node_projects/platzigram/rethinkdb_data
+2017-10-11T02:43:23.101122058 1.488800s info: Automatically using cache size of 258 MB
+2017-10-11T02:43:23.106094367 1.493769s notice: Listening for intracluster connections on port 29015
+2017-10-11T02:43:23.155155592 1.542831s notice: Listening for client driver connections on port 28015
+2017-10-11T02:43:23.155833096 1.543505s notice: Listening for administrative HTTP connections on port 8080
+2017-10-11T02:43:23.155853471 1.543524s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-11T02:43:23.155861986 1.543533s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-11T02:43:23.155875602 1.543546s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-11T02:43:23.155883063 1.543554s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-10-11T02:43:23.155896179 1.543567s notice: Server ready, "enmsiac_a84" dfeb99ea-7760-44c9-846c-240eb3eb5663
+2017-10-11T02:59:46.863740509 985.251415s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-10-11T02:59:46.864215574 985.251887s notice: Shutting down client connections...
+2017-10-11T02:59:46.864620474 985.252295s notice: All client connections closed.
+2017-10-11T02:59:46.864850382 985.252522s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-10-11T02:59:46.889984036 985.277658s notice: Storage engine shut down.
