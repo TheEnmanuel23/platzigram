@@ -88,7 +88,7 @@ function ensureAuth (req, res, next) {
 	res.status(401).send({ error: 'not authenticated' });
 }
 
-app.get('/api/pictures', ensureAuth, function(req, res){
+app.get('/api/pictures', function(req, res){
 	var pictures = [
 		{
 			user: {
@@ -119,6 +119,7 @@ app.post('/api/pictures', ensureAuth, function (req, res) {
     if (err) {
       return res.send(500, "Error uploading file");
     }
+    
     res.send('File uploaded');
   })
 })
