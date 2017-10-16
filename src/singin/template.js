@@ -7,7 +7,7 @@ var singinForm = yo`
 	<div class="row">
 		<div class="singup-box">
 			<h1 class="platzigram">Platzigram</h1>
-			<form action="" class="singup-form">
+			<form action="/login" method="POST" class="singup-form">
 				<div class="section">
 					<a href="" class="btn btn-fb hide-on-small-only">${translate.message('singup.facebook')}</a>
 					<a href="" class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official"></i> ${translate.message('singup.text')}</a>
